@@ -6,7 +6,8 @@ import { ChangeOrderStatusDto, CreateOrderDto } from './dto';
 
 @Controller()
 export class OrdersController {
-  constructor(private readonly ordersService: OrdersService) {}
+  constructor(
+    private readonly ordersService: OrdersService) {}
 
   @MessagePattern('create')
   create(@Payload() createOrderDto: CreateOrderDto) {
